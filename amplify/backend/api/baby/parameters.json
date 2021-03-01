@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "baby",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authpinkorblue62bd7196",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+type Baby 
+@model 
+@auth(rules: [{allow: owner}])
+@key (fields: ["id"])
+{
+  id: ID!
+  owner: String
+  name: String!
+  parents_emails: [UnlockingEmailAddress!]!
+  adjudicator_email: String!
+  gender: BabyGender
+}
+
+
+enum BabyGender {
+  BOY
+  GIRL
+  PENDING
+}
+
+type UnlockingEmailAddress
+{
+  email: String!
+  unlocked: Boolean
+}
